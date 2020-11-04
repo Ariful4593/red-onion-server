@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
-const cors = require('cors')
+const cors = require('cors');
 require('dotenv').config()
 
 app.get('/', (req, res) => {
@@ -28,4 +28,4 @@ client.connect(err => {
 
 
 const port = 4000;
-app.listen(port)
+app.listen(process.env.PORT || port)
